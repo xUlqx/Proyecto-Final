@@ -1,0 +1,25 @@
+
+
+La Tarjeta ID : 6 ha sido creado con Exit | Tiempo:2019-12-13 14:15:32.538768
+
+
+Tarjeta NO Creada Correctamente | Tiempo:2019-12-13 14:16:53.840634
+
+
+Se Creo el Cliente numero : 3 Exitosamente | Tiempo:2019-12-13 14:24:53.330469
+
+
+La Venta numero : 2 ha sido Eliminada | Tiempo:2019-12-13 14:26:10.222340
+
+
+La Venta numero : 2 ha sido Exitosa | Tiempo:2019-12-13 14:26:14.048997
+
+
+Se Creo el Cliente numero : 1 Exitosamente | Tiempo:2019-12-13 14:53:02.370119
+
+
+La Venta numero : 1 ha sido Eliminada | Tiempo:2019-12-13 14:53:08.991725
+
+
+La Venta numero : 2 ha sido Eliminada | Tiempo:2019-12-13 14:53:12.326341
+

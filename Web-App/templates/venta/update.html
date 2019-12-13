@@ -1,0 +1,53 @@
+{% extends 'estructura.html' %}
+{% block contenido %}
+    <input type="hidden" value="id">
+    <form method="POST" action="/venta/crear" enctype='multipart/form-data'>
+      ----------------------
+        <label for="">Seleccione el Cliente </label>
+        -----------------------
+        <table>
+          <tbody>
+          <tr>
+            <td>
+     Clientes:   <select name="id_cliente" >
+                  {% for cliente in clientes %}
+                      <option value="{{ cliente.id }}">{{ cliente.apellido }}, {{ cliente.nombre }}</option>
+                    
+                      {% endfor %}
+                
+              </select><br>
+            </td>
+          </tr>
+          <tr>
+              
+            <td>
+                ----------------------
+        <label for="">Seleccione la Tarjeta </label>
+        ------------------------ <br>
+                Tarjetas:   <select name="token">
+                             {% for tarjeta in tarjetas %}
+                                 <option value="{{ tarjeta.token }}">{{ tarjeta.id }} : {{tarjeta.tipo}}, Num: {{ tarjeta.numero }}</option>
+                               
+                                 {% endfor %}
+                           
+                         </select><br>
+                       </td>
+            </tr>
+          <tr>
+              <td>
+                  -----------------
+                  <label for="">Ingrese el Monto de la Venta: </label>
+                  --------------------<br>
+              Monto: <input type="number" name="monto"><br><br>
+            </td>
+          </tr>
+          <tr>
+              <td>
+                  <input type="submit" value="Agregar">
+              </td>
+          </tr>
+          </tbody>
+        </table>
+
+      </form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'estructura.html' %}
+{% block contenido %}
+    <form method="POST" action="/cliente/crear" enctype='multipart/form-data'>
+      Nombre: <input type="text" name="nombre"><br>
+      Apellido: <input type="text" name="apellido"><br>
+      <input type="submit" value="Agregar">
+    </form>
+{% endblock %}

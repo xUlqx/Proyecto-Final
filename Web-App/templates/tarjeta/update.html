@@ -1,0 +1,37 @@
+{% extends 'estructura.html' %}
+{% block contenido %}
+    <form method="POST" action="/tarjeta/update" enctype='multipart/form-data'>
+      
+            <input type="hidden" name="id" value="{{ tarjeta.id }}"><br>
+            Tipo: <input type="text" name="tipo"><br>
+            Numero: <input type="number" name="numero"><br>
+            Cod. Seguridad: <input type="number" name="codigoSeguridad"><br>
+            <label>Fecha de Vencimiento: </label>
+            <select name="vencimientoMes">
+                <option value="01">Enero</option>
+                <option value="02">Febrero </option>
+                <option value="03">Marzo</option>
+                <option value="04">Abril</option>
+                <option value="05">Mayo</option>
+                <option value="06">Junio</option>
+                <option value="07">Julio</option>
+                <option value="08">Augosto</option>
+                <option value="09">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+            </select>
+            <select name="vencimientoAnio">
+                <option value="19"> 2019</option>
+                <option value="20"> 2020</option>
+                <option value="21"> 2021</option>
+                <option value="22"> 2022</option>
+                <option value="23"> 2023</option>
+            </select>
+            Monto Maximo: <input type="number" name="montoMax"><br>
+       
+        
+    
+      <input type="submit" value="Update">
+    </form>
+{% endblock %}

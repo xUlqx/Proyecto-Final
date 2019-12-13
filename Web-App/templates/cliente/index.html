@@ -1,0 +1,36 @@
+{% extends 'estructura.html' %}
+{% block contenido %}
+    <div>Opciones</div>
+    <div>
+        <span><a href="crear">Crear un Cliente</a><br></span>
+    </div>
+    <h3>Clientes</h3>
+    <table>
+        <thead>
+            <td>Num</td>
+            <td>ID</td>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Creado</td>
+            <td>Activo</td>
+            <td>Detalles</td>
+           
+
+        </thead>
+        <tbody>
+        {% for cliente in clientes %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ cliente.id }}</td>
+                <td>{{ cliente.nombre }}</td>
+                <td>{{ cliente.apellido }}</td>
+                <td>{{ cliente.creado }}</td>
+                <td>{{ cliente.activo }}</td>
+                <td><a href="detalle?id={{ cliente.id }}">Detalles</a></td>
+                <td><a href="delete?id={{ cliente.id }}">Delete</a></td>
+                <td><a href="update?id={{ cliente.id }}">Update</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

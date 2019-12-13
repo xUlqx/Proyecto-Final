@@ -1,0 +1,39 @@
+{% extends 'estructura.html' %}
+{% block contenido %}
+    <div>Opciones</div>
+    <div>
+        <span><a href="crear">Crear una Tarjeta</a><br></span>
+    </div>
+    <h3>Detalle de la Tarjeta</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>ID: </td><td>{{ tarjeta.id }}</td>
+            </tr>
+            <tr>
+                <td>Tipo: </td><td>{{ tarjeta.tipo }}</td>
+            </tr>
+            <tr>
+                <td>Numero: </td><td>{{ tarjeta.numero }}</td>
+            </tr>
+            <tr>
+                <td>Codigo Seguridad: </td><td>{{ tarjeta.codigoSeguridad }}</td>
+            </tr>
+            <tr>
+                <td>Vencimiento Mes: </td><td>{{ tarjeta.vencimientoMes }}</td>
+            </tr>
+            <tr>
+                <td>Vencimiento Año: </td><td>{{ tarjeta.vencimientoAnio }}</td>
+            </tr>
+            <tr>
+                <td>Monto Maximo: </td><td>{{ tarjeta.montoMax }}</td>
+            </tr>
+            <tr>
+                <td>Token: </td><td>{{ tarjeta.token }}</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'estructura.html' %}
+{% block contenido %}
+    <div>Opciones</div>
+    <div>
+        <span><a href="crear">Relizar una Venta</a><br></span>
+    </div>
+    <h3>Ventas Realizadas</h3>
+    <table>
+
+        <thead>
+            <td>ID Venta</td>
+            <td>ID Cliente</td>
+            <td>Token Tarjeta</td>
+            <td>Monto</td>
+        </thead>
+        <tbody>
+            
+            {% for venta in ventas %}
+                <tr>
+            
+                    <td>{{ venta.id }}</td>
+                    <td>{{ venta.id_cliente }}</td>
+                    <td>{{ venta.token }}</td>
+                    <td>{{ venta.monto }}</td>
+                    <td><a href="delete?id={{ venta.id }}">Delete</a></td>
+                    
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+{% endblock %}

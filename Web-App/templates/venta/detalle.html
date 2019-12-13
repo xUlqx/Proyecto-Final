@@ -1,0 +1,61 @@
+{% extends 'estructura.html' %}
+{% block contenido %}
+    <div>Opciones</div>
+    <div>
+        <span><a href="crear">Realizar una Venta</a><br></span>
+    </div>
+    <h3>Detalle de Ventas</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>ID</td><td>{{ venta.id }}</td>
+            </tr>
+            <tr>
+                <td>Nombre</td><td>{{ cliente.nombre }}</td>
+            </tr>
+            <tr>
+                <td>Apellido</td><td>{{ cliente.apellido }}</td>
+            </tr>
+            <tr>
+                <td>Creado</td><td>{{ cliente.creado }}</td>
+            </tr>
+            <tr>
+                <td>Activo</td><td>{{ cliente.activo }}</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <h2>Detalle de las Tarjetas de Credito</h2>
+    <table>
+        <tbody>
+        {% for tarjeta in cliente.tarjetas %}
+            <tr>
+                <td>ID: </td><td>{{ tarjeta.id }}</td>
+            </tr>
+            <tr>
+                <td>Tipo: </td><td>{{ tarjeta.tipo }}</td>
+            </tr>
+            <tr>
+                <td>Numero:</td><td>{{ tarjeta.numero }}</td>
+            </tr>
+            <tr>
+                <td>Codigo Seguridad: </td><td>{{tarjeta.codigoSeguridad }}</td>
+            </tr>
+            <tr>
+                <td>Fecha Vencimiento: </td><td>{{ tarjeta.vencimientoMes }}/{{ tarjeta.vencimientoAnio }}</td>
+            </tr>
+            <tr>
+                <td>Monto Maximo: :</td><td>{{ tarjeta.montoMax }}</td>
+            </tr>
+                
+                
+                
+                
+            
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'estructura.html' %}
+{% block contenido %}
+    <form method="POST" action="/venta/seleccionar" enctype='multipart/form-data'>
+        <label for="">Seleccione la Tarjeta del Cliente: </label><br>
+    
+    {% if cliente.tarjetas|length != 0 %}             
+                
+                <table>
+                        <tr>
+                            Clientes: <select name="clientes">
+                                        {% for tarjeta in cliente.tarjetas %}
+                                            <option value="{{ tarjeta.id }}">{{ tarjeta.tipo }}, {{ tarjeta.numero }}</option>
+                                        {% endfor %}
+                        </tr>
+                </table>
+                
+
+       
+    {% else %}
+        <label for="">El Cliente no posee tarjetas Registradas</label>
+    {% endif %}
+                
+
+            
+        
+      <input type="submit" value="Agregar">
+    </form>
+<script type="text/javascript" src="{{ url_for('static', filename='prueba.js') }}"></script>
+{% endblock %}

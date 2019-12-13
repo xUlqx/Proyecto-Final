@@ -1,0 +1,13 @@
+{% extends 'estructura.html' %}
+{% block contenido %}
+    <form method="POST" action="/cliente/update" enctype='multipart/form-data'>
+      
+            Id: <input type="text" name="id" value="{{ cliente.id }}"><br>
+            Nombre: <input type="text" name="nombre" value="{{ cliente.nombre }}"><br>
+            Apellido: <input type="text" name="apellido" value="{{ cliente.apellido }}"><br>
+       
+        
+    
+      <input type="submit" value="Update">
+    </form>
+{% endblock %}
